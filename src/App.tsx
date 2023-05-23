@@ -1,3 +1,4 @@
+import Cronometro from "./components/Cronometro";
 import Formulario from "./components/Formulario";
 import Lista from "./components/Lista";
 import  style  from './style.module.scss'
@@ -9,6 +10,7 @@ function App() {
         <h1>Alura Studies</h1>
         <Formulario />
         <Lista />
+        <Cronometro/>
       </div>
     </>
   );

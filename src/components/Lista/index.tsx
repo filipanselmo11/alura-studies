@@ -1,3 +1,4 @@
+import Item from './Item';
 import style from './lista.module.scss'
 const Lista = () => {
   const tarefas = [
@@ -24,10 +25,12 @@ const Lista = () => {
         <h2>Estudos do Dia</h2>
         <ul>
           {tarefas.map((item, index) => (
-            <li key={index} className={style.item}>
-              <h3>{item.tarefa}</h3>
-              <span>{item.tempo}</span>
-            </li>
+            <Item
+              key={index}
+              tarefa={item.tarefa}
+              tempo={item.tempo}
+            />
+            // <Item {...item}/> -> Forma Alternativa
           ))}
         </ul>
       </aside>
