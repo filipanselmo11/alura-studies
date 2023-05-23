@@ -1,8 +1,17 @@
-const Botao = () => {
+
+import style from './botao.module.scss'
+import { IBotao } from '../../interfaces/IBotao'
+
+const Botao = (props: IBotao) => {
+    // const color = 'red'
+    // const ativo = false;
+    // const styles = {
+    //     backgroundColor: ativo ? 'green' : 'red'
+    // }
     return (
-        <div className="botao">
-            <button>
-                OK
+        <div>
+            <button className={style.botao}>
+                {props.children}
             </button>
         </div>
     )
